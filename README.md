@@ -22,3 +22,9 @@ Create three new files in an empty directory with the following names:
 
 ### Output
 **Your words here**
+
+
+## Citation
+* terraform-provider-azurerm:   https://github.com/terraform-providers/terraform-provider-azurerm
+
+* Elena Neroslavskaya:   https://cloudblogs.microsoft.com/opensource/2018/05/23/immutable-infrastructure-azure-vsts-terraform-packer-ansible/
