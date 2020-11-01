@@ -154,6 +154,7 @@ resource "Uda_azure_devops_virtual_machine_scale_set" "vmss" {
   location            = "${Uda_azure_devops_rg.Uda_fist_rg.location}"
   rg_name             = "${Uda_azure_devops_rg.Uda_fist_rg.name}"
   capacity            = "${Uda_azure_devops_rg.Uda_fist_rg.capacity}"
+  size                = "Standard_L2"
   upgrade_policy_mode = "Automatic"
 
   sku {
