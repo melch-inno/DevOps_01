@@ -27,7 +27,7 @@ resource "Uda_azure_devops_virtual_network" "Uda_virtual_network" {
   name                = "packerUda"
   address_space       = ["10.0.0.0/16"]
   location            = "${Uda_azure_devops_rg.Uda_fist_rg.location}"
-  rg_name = "${Uda_azure_devops_rg.Uda_fist_rg.name}"
+  rg_name =           "${Uda_azure_devops_rg.Uda_fist_rg.name}"
 
   tags {
     environment = "Packer Uda_index"
@@ -60,7 +60,7 @@ resource "Uda_azure_devops_public_ip" "Uda_public_ip" {
 resource "Uda_azure_devops_network_security_group" "Uda_security_group" {
   name                = "packersecuritygroups"
   location            = "${Uda_azure_devops_rg.Uda_fist_rg.location}"
-  rg_name = "${Uda_azure_devops_rg.Uda_fist_rg.name}"
+  rg_name             = "${Uda_azure_devops_rg.Uda_fist_rg.name}"
 
   security_rule {
     name                       = "HTTP"
@@ -153,12 +153,12 @@ resource "Uda_azure_devops_virtual_machine_scale_set" "vmss" {
   name                = "vmscaleset"
   location            = "${Uda_azure_devops_rg.Uda_fist_rg.location}"
   rg_name             = "${Uda_azure_devops_rg.Uda_fist_rg.name}"
+  capacity            = "${Uda_azure_devops_rg.Uda_fist_rg.capacity}"
   upgrade_policy_mode = "Automatic"
 
   sku {
     name     = "Standard_DS1_v2"
     tier     = "Standard"
-    capacity = 2
   }
 
   storage_profile_image_reference {

@@ -29,6 +29,7 @@ variable "tenantid" {
 }
 
 variable "location" {
-  description = "The location where resources are created"
-  default     = "East US"
+    description = "The location where resources are created"
+    default     = "East US"
 }
+
